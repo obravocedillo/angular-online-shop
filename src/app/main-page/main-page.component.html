@@ -1,0 +1,70 @@
+<div class="contenedor-principal">
+    <div class="container">
+        <div class="navigation">
+
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" >El mercado fresco</a>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a ><span class="glyphicon glyphicon-th"></span></a></li>
+                        <li>
+
+                            <a [routerLink]="['/basket']"><i class="glyphicon glyphicon-shopping-cart"><label class="badge badge-warning">{{comprados}}</label></i></a>
+
+
+                        </li>
+
+                        <li><a ><span class="glyphicon glyphicon-inbox"></span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <div class="parte-principal">
+            <div class="parte-central">
+                <div class="titulo-parte-central">
+                    <div class="titulo">
+                        <h3>Catalogo de Productos</h3>
+                    </div>
+                    <div class="search-section">
+                        <form class="form-inline my-2 my-lg-0">
+                            <h3>¿Qué estas buscando?</h3>
+                            <input class="form-control mr-sm-2" type="text" placeholder="Pulse Enter al finalizar" ng-model="buscar"  (change)="busqueda($event)">
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+            <hr>
+            <div class="parte-tienda" >
+                <div class="card objeto"  *ngFor="let objects of objetosTotal; let j = index" >
+                    <img class="card-img-top imagen" src={{objects.imagen}} alt="Card image">
+                    <div class="card-body">
+                        <h3 class="card-title">{{objects.name}}</h3>
+                        <p class="card-text">Precio: {{objects.precio}}</p>
+                        <p class="card-text">Restantes: {{objects.cantidad}}</p>
+
+                        <form #f="ngForm" (ngSubmit)="agregarCantidad(f.value, objects)">
+                            <a  class="btn btn-primary primer-boton">Ver mas</a>
+
+                            <a  class="btn btn-primary segundo-boton"><button type="submit" name="button" class="boton-cantidad">Comprar</button></a>
+                            <span><input type="number" id="cantidad" min="1" max={{objects.cantidad}} ngModel name="comprados" /></span>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

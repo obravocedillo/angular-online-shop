@@ -1,0 +1,116 @@
+
+.contenedor-principal{
+    min-height:100vh;
+    background-image: url("../img/main-fondo.jpg");
+    color: white;
+    background-size: cover;
+    background-position:center top;
+}
+
+.navbar{
+    background: white;
+    margin-bottom: 3vh;
+}
+
+.parte-principal{
+    background: white;
+
+}
+
+.navbar a:hover{
+    background: none;
+    color: black;
+}
+
+.parte-central{
+    background: white;
+    color: black;
+    margin-bottom: 0%;
+}
+
+.titulo-parte-central{
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo{
+    width: 70%;
+    margin-top: 4vh;
+    margin-left: 2%;
+
+}
+
+.search-section{
+    width: 30%;
+    margin-bottom: 4vh;
+    margin-left: 2%;
+}
+
+hr{
+      border:1px solid black;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+}
+
+.parte-tienda{
+    background: white;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+
+a:visited {
+    color: gray;
+}
+
+li{
+    padding: 0%;
+}
+
+.parte-derecha{
+    margin-left: 2%;
+    width: 50%;
+    margin-right: 2%;
+    color: black;
+    margin-bottom: 10vh;
+}
+
+.parte-izquierda{
+    width: 40%;
+    color: black;
+}
+
+.contenido-div{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 2%;
+
+}
+
+.titulo{
+     text-transform: capitalize;
+}
+
+p{
+    margin: 0%;
+}
+
+img{
+    width: 25%;
+    margin: 0;
+}
+
+.opcion1{
+    margin-right:2%;
+}
+
+.forma{
+    display: inline-block;
+    margin-right: 2%;
+}

@@ -1,0 +1,33 @@
+.login-title{
+    text-align: center;
+}
+
+.send-form{
+    text-align: center;
+}
+
+.form-send{
+    margin-top: 28vh;
+}
+
+
+
+.boton-enviar{
+    background-color: #82ff51;
+    height: 6vh;
+    border-radius: 4px;
+}
+
+.contenedor-principal{
+    min-height:100vh;
+    background-image: url("../img/login-fondo.jpg");
+    color: white;
+    background-size: cover;
+    background-position:center top;
+
+
+}
+
+.form-text{
+    color: white;
+}

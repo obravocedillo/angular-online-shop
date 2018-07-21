@@ -1,0 +1,33 @@
+<div class="contenedor-principal">
+    <div class="container">
+        <div class="form-send">
+            <div class="login-title">
+                <h2>Iniciar Sesion</h2>
+            </div>
+            <div class="form-section">
+                <form #form="ngForm" (ngSubmit)="submitLogin(form.value)">
+
+                    <div class="form-group">
+                        <label for="email" [ngStyle]="incorrecto()">Correo Electronico</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" ngModel name="email" required="true"  >
+                        <small id="emailHelp" class="form-text text-muted">{{mensajeEmail}}</small>
+                    </div>
+
+                    <div class="form-group" ng-controller="MyController">
+                        <label for="contraseña" [ngStyle]="incorrecto()" >Contraseña</label>
+                        <input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Enter your password" ngModel name="password" required="true" >
+                        <small id="emailHelp" class="form-text text-muted"  >{{mensajePass}}</small>
+                    </div>
+
+                    <div class="send-form">
+                        <button type="submit" name="button" class="boton-enviar">Iniciar Sesion</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
